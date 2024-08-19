@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+    font-weight: 400-700;
+    font-style: normal;
+}
+
+:root{
+    --clr-green: hsl(75, 94%, 57%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-700: hsl(0, 0%, 20%);
+    --clr-grey-800: hsl(0, 0%, 12%);
+    --clr-grey-900: hsl(0, 0%, 8%);
+
+    --ff-base: 'Inter', sans-serif;
+
+    --fs-paragraph: 14px;
+
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-base);
+    min-height: 100vh;
+    background-color: var(--clr-grey-900);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    padding: 2em;
+    justify-self: center;
+    margin: auto 1em;
+    background-color: var(--clr-grey-800);
+    display: grid;
+    gap: 1em;
+    border-radius: 1em;
+}
+
+@media(max-width: 480px){
+    .container{
+        padding: 1em;
+    }
+}
+
+.container > *{
+    color: var(--clr-white);
+}
+
+.author{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .75em;
+}
+
+.author > img{
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+.author > h1{
+    font-weight: var(--fw-600);
+}
+
+.author > p{
+    color: var(--clr-green);
+    font-weight: var(--fw-600);
+    font-size: var(--fs-paragraph);
+}
+
+.container > p{
+    margin: .5em auto;
+    font-weight: var(--fw-400);
+    font-size: var(--fs-paragraph);
+    text-align: center;
+}
+
+ul{
+    display: grid;
+    gap: 1em;
+}
+
+ul > li{
+    list-style: none;
+    background-color: var(--clr-grey-700);
+    border-radius: .5em;
+    padding: .75em 6em;
+    text-align: center;
+    
+    color: var(--clr-white);
+    box-shadow: 1px 1px 1px var(--clr-grey-700);
+}
+
+ul > li:hover{
+    background-color: var(--clr-green);
+    color: var(--clr-grey-900);
+}
+
+@media (max-width: 480px) {
+    ul > li{
+        padding: .75em 4em;
+    }   
+}
+
+li > a{
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--ff-base);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-600);
+}
+
+/* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
+.attribution { font-size: 11px; text-align: center; margin-bottom: 1em; color: var(--clr-white); }
+.attribution a { color: hsl(228, 45%, 44%); }
