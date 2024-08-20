@@ -108,12 +108,6 @@ ul > li:hover{
     color: var(--clr-grey-900);
 }
 
-@media (max-width: 480px) {
-    ul > li{
-        padding: .75em 4em;
-    }   
-}
-
 li > a{
     display: block;
     padding: .75em 6em;
@@ -122,6 +116,12 @@ li > a{
     font-family: var(--ff-base);
     font-size: var(--fs-paragraph);
     font-weight: var(--fw-600);
+}
+
+@media (max-width: 480px) {
+    li > a{
+        padding: .75em 4em;
+    }   
 }
 
 /* <!-- Feel free to remove these styles or customise in your own stylesheet 👍 --> */
